@@ -7,21 +7,20 @@ require_once ('product.php');
  */
 class WeightProduct extends Product
 {
-	private $price;
-	private $quantity;
 	private $weight;
 
 	public function __construct($price, $quantity, $weight)
 	{
-		$this ->price = $price;
-		$this ->quantity = $quantity;
 		$this -> weight = $weight;
+		return parent::__construct($price, $quantity);
 	}
 
-	public function getUltimatePrice() {
-		return $this -> price * $this -> quantity * $this -> weight;
+
+	public function getUltimatePrice()
+	{
+		return (parent::getUltimatePrice()) * $this->weight;
 	}
 }
 
-$weightGood = new WeightProduct(31, 1, 10);
+$weightGood = new WeightProduct(31, 2, 10);
 echo $weightGood -> getUltimatePrice();
