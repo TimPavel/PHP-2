@@ -1,0 +1,13 @@
+
+<h1>Галерея</h1>
+
+{% for img in smallImages %}
+
+	{#<a href="{{ pathToBig }}{{ img['nameImg'] }}.php">#}
+		{#<img src="{{ pathToSmall }}{{ img['nameImg'] }}" alt="{{ img }}">#}
+	{#</a>#}
+
+	<a href="big-image.php?id= {{ img['id'] }}">
+		<img src="{{ img['linkSmallImg'] }}{{ img['nameImg'] }}" alt="{{ img['nameImg'] }}">
+	</a>
+{% endfor %}

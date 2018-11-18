@@ -1,0 +1,23 @@
+<h1>Twig page</h1>
+
+<h2>Current date {{ currentDate }}</h2>
+
+<p>
+	{% if error %}
+	<strong style="color: red">Text</strong>
+		{% else %}
+	<strong style="color: green">Text</strong>
+	{% endif %}
+</p>
+
+<h3>Users</h3>
+<ul>
+	{% for idx, user in users %}
+	<li>{{ idx }} : {{ user.login | upper }}</li>
+	<li>{{ idx }} : {{ user['email'] }}</li>
+	{% endfor %}
+	<hr>
+</ul>
+
+<a href="gallery.php">Галерея</a>
+
