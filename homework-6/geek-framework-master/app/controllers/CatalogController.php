@@ -28,4 +28,21 @@ class CatalogController extends Controller
 			'items' => $items,
 		]);
 	}
+
+	/**
+	 * Просмотр выбранного товара
+	 *
+	 * @param $id
+	 *
+	 * @return string
+	 */
+	public function show($id)
+	{
+		// просмотр одной
+		$item = Catalog::findById($id);
+
+		return $this->render('view', [
+			'item' => $item,
+		]);
+	}
 }

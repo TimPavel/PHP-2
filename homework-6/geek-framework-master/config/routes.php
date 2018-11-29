@@ -24,6 +24,7 @@ return [
         'page/{id}' => [PageController::class, 'show'],
 
 		'catalog' => [CatalogController::class, 'index'],
+		'item/{id}' => [CatalogController::class, 'show'],
 
     ],
 ];
