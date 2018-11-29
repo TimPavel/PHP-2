@@ -1,0 +1,18 @@
+<h1>Вход в систему</h1>
+
+<a href="registration">Регистрация</a>
+
+<form  method="post">
+    <p>
+        <input type="text" placeholder="login" name="User[login]" value="{{ user.login }}" required>
+        {% if user.errors.login %}
+        <small style="color: red">{{ user.errors.login }}</small>
+		{% endif %}
+    </p>
+    <p>
+        <input type="password" placeholder="password" name="User[password]" value="{{ user.password }}" required>
+    </p>
+
+    <button type="submit" >OK</button>
+
+</form>

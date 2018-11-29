@@ -1,0 +1,15 @@
+{% extends '/layouts/default.twig' %}
+
+{% block content %}
+
+	<h2>Catalog:</h2>
+
+	<ul>
+		{% for item in items %}
+			<li>
+				<a href="/page/{{ item.id }}">{{ item.name }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}

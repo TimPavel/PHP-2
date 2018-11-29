@@ -1,0 +1,21 @@
+version: '3'
+services:
+  server:
+    image: manchenkoff/server
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      XDEBUG_CONFIG: remote_host=host.docker.internal
+      PHP_IDE_CONFIG: serverName=localhost
+    volumes:
+      - ./:/var/www
+      - ./config/host.conf:/etc/apache2/sites-enabled/host.conf
+  db:
+    image: mysql:5.7
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: geekbrains
