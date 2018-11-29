@@ -16,8 +16,6 @@ class CatalogController extends Controller
 
 	public function index()
 	{
-
-
 		$items = Catalog::all(
 			Catalog::find()
 
@@ -43,6 +41,17 @@ class CatalogController extends Controller
 
 		return $this->render('view', [
 			'item' => $item,
+		]);
+	}
+
+	// not working yet
+	public function showCart()
+	{
+
+		$orderItem = $this->request->post();
+		var_dump($orderItem);
+		return $this->render('cart', [
+			'item' => $orderItem,
 		]);
 	}
 }

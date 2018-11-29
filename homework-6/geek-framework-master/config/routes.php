@@ -25,6 +25,7 @@ return [
 
 		'catalog' => [CatalogController::class, 'index'],
 		'item/{id}' => [CatalogController::class, 'show'],
+		'cart' => [CatalogController::class, 'showCart'],
 
     ],
 ];

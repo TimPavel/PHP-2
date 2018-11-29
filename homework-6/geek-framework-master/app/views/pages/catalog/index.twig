@@ -4,13 +4,24 @@
 
 	<h2>Catalog:</h2>
 
-	<p></p>
 
 	<ul>
 		{% for item in items %}
-			<li>
-				<a href="/item/{{ item.id }}">{{ item.name }}</a>
-			</li>
+			{% if item.shop_category_id  == 1 %}
+				<li>
+					<a href="/item/{{ item.id }}">{{ item.name }} </a>
+				</li>
+			{% endif %}
+
+		{% endfor %}
+		<hr>
+		{% for item in items %}
+			{% if item.shop_category_id  == 2 %}
+				<li>
+					<a href="/item/{{ item.id }}">{{ item.name }}</a>
+				</li>
+			{% endif %}
+
 		{% endfor %}
 	</ul>
 

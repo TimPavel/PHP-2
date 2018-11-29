@@ -2,12 +2,18 @@
 
 {% block content %}
 
-	<a href="/catalog">Назад</a>
+	<form method="post">
+		<a href="/catalog">Назад</a>
 
-	<h2>Название: {{ item.name }}</h2>
+		<h2>Название: {{ item.name }}</h2>
+		<img src="/storage/img/product.jpg" alt="goodImage">
+		<p>Цена: {{  item.price }}</p>
+		<p>Описание: {{ item.description }}</p>
 
-	<p>Описание: {{ item.description }}</p>
+		<button value="{{ item.id }}">Добавить в корзину</button>
+	</form>
 
-	<button>BUY</button>
+	<a href="/cart">Перейти в корзину</a>
+
 
 {% endblock %}

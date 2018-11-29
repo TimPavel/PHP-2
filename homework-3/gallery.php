@@ -24,7 +24,6 @@ while ($row = $stmt->fetch()) {
 	$arraySmallImages[] = $row;
 }
 
-print_r($arraySmallImages['0']['linkSmallImg']);
 //function getItemArray($sql) {
 //
 //	$result = mysqli_query(mysqli_connect("127.0.0.1", "root", "", "geek_project"), $sql);
