@@ -14,6 +14,10 @@ use core\base\Controller;
 
 class CatalogController extends Controller
 {
+	/**
+	 * просмотр все товаров
+	 * @return string
+	 */
 	public function index()
 	{
 		$items = Catalog::all(

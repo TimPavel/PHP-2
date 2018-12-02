@@ -7,11 +7,11 @@
 
 	<ul>
 		{% for item in items %}
-			{% if item.shop_category_id  == 1 %}
+
 				<li>
 					<a href="/item/{{ item.id }}">{{ item.name }} </a>
 				</li>
-			{% endif %}
+
 
 		{% endfor %}
 	</ul>

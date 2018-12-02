@@ -18,7 +18,9 @@ return [
     'routes' => [
         //'website/path' => ['ControllerClass', 'actionName'],
         '/' => [SiteController::class, 'index'],
+		// страница регистрации нового пользователя
         'registration' => [SiteController::class, 'registration'],
+		// страница приветствия пользователя
 		'result' => [SiteController::class, 'index'],
 		'logout' => [SiteController::class, 'logout'],
 
@@ -26,12 +28,17 @@ return [
         'pages/new' => [PageController::class, 'add'],
         'page/{id}' => [PageController::class, 'show'],
 
+		// просмотр все товаров
 		'catalog' => [CatalogController::class, 'index'],
+		// просмотр товаров выбранной категории
 		'cat/{id}' => [CatalogController::class, 'showGoods'],
+		// просмотр товара
 		'item/{id}' => [CatalogController::class, 'show'],
 
+		// на страницу выбора категорий товара для просмотра
 		'cats' => [CategoriesController::class, 'index'],
 
+		// на страницу корзины
 		'cart' => [CartController::class, 'showCart'],
 
     ],
