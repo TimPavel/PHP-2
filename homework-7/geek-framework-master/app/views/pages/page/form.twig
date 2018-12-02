@@ -1,0 +1,21 @@
+{% extends '/layouts/default.twig' %}
+
+{% block content %}
+
+    <h2>Добавление новой страницы</h2>
+
+    <form method="post">
+        <p>
+            <input type="text" name="Page[title]" placeholder="Название">
+        </p>
+
+        <p>
+            <textarea name="Page[content]" cols="30" rows="10"></textarea>
+        </p>
+
+        <p>
+            <button type="submit">Сохранить</button>
+        </p>
+    </form>
+
+{% endblock %}

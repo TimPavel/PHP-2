@@ -1,0 +1,33 @@
+{% extends '/layouts/default.twig' %}
+
+
+{% block content %}
+	<h3>Товары из категории: {{ catName.name }}</h3>
+
+	{#<ul>#}
+		{#{% for item in goods %}#}
+			{#<li>#}
+				{#<a href="/item/{{ item.id }}">{{ item.name }} </a>#}
+			{#</li>#}
+		{#{% endfor %}#}
+	{#</ul>#}
+
+	<div id="content" style="display: flex; justify-content: flex-start; flex-wrap: wrap">
+
+		{% for item in goods %}
+
+			<div class="card" style="width: 250px; margin: 0 10px 20px 0">
+				<img class="card-img-top" src="/storage/img/{{ item.img }}" alt="ProductImage">
+				<div class="card-body">
+					<h5 class="card-title">{{ item.name }}</h5>
+					<p class="card-text">{{ item.description }}</p>
+					<p class="card-text">{{ item.price }} &#8381; </p>
+					<a href="/item/{{ item.id }}" class="btn btn-primary">Подробнее</a>
+				</div>
+
+			</div>
+		{% endfor %}
+	</div>
+	<a href="/cats">Назад</a>
+
+{% endblock %}
