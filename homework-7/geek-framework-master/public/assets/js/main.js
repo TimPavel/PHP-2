@@ -1,8 +1,3 @@
-/*
- * Created by Artem Manchenkov
- * artyom@manchenkoff.me
- * manchenkoff.me © 2018
- */
 
 $('#add2Cart').on('click', function () {
 	event.preventDefault();
